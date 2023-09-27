@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gibson Les Paul</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-
+4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Guitarra Gibson Les Paul</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="./img/LesPaul2.jpg" alt="Gibson Les Paul">
+            </div>
+             <div class="col-md-8">
+
+                <div class="col-12">
+                    <div class="card border-primary">
+                        <div class="card-header text-bg-primary">
+                        Detalhes do Produto
+                        </div>
+                        <div class="card-body">
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                </div> 
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <p>Escolha a quantidade</p>
+                        <div class="row" style="padding-bottom: 2px;">
+                            <div class="col-md-6">
+                                <input type="number" class="form-control" placeholder="000">
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn btn-danger">Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="col-md-4">
+                        <h1>R$37.000,00</h1>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="./img/pagseguro-12x.png" alt="Bandeiras de Cartões aceitos" 
+                        style="max-width:320px;
+                        max-height:320px;
+                        width: auto;
+                        height: auto;">
+                    </div>
+                </div>
+
+             </div>
+
+        </div>
+
+        <div class="row" style="padding-top: 15px;">
+            <div class="col-12">
+                <!--Nav-->
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                      <a id='botaoVideo' class="nav-link active" aria-current="page" href="#">Vídeos</a>
+                    </li> 
+                    <li class="nav-item">
+                      <a id='botaoFoto' class="nav-link" href="#">Fotos</a>
+                    </li>
+                    <li class="nav-item">
+                      <a id='botaoComent' class="nav-link" href="#">Comentários</a>
+                    </li>
+                </ul>
+                <!--Conteudos-->
+                <div id="conteudoVideo" class="">
+                    <p>Mídia</p>
+                    <iframe style="max-width:420px; max-height:315px; width: auto; height: auto;" 
+                    src="https://youtu.be/VS3g71rrs6w?si=zrB-uQren4urE1H1"></iframe>
+                </div>
+                <div id="conteudoFoto" class="d-none">
+                    <p>Imagens</p>
+                    <img style="max-width:420px; max-height:315px; width: auto; height: auto;" src="./img/LesPaul2.jpg">
+                </div>
+                <div id="conteudoComent" class="d-none">
+                    <ul>
+                        <h2>Pedro Alcantara</h2>
+                        <p>"Muito boa"</p>
+                    </ul>
+                </div>
+            </div>
+        </div>             
+    </div>
+
+    
+<script>
+    const buttonVideo = document.getElementById('botaoVideo');
+    const buttonFoto = document.getElementById('botaoFoto');
+    const buttonComent = document.getElementById('botaoComent');
+
+    buttonVideo.addEventListener('click', (evt) => MostarVideo());
+
+    buttonFoto.addEventListener('click', (evt) => MostarFoto());
+
+    buttonComent.addEventListener('click', (evt) => MostarComent());
+
+
+   function MostarVideo(){
+        document.getElementById('botaoFoto').classList.remove('active');
+        document.getElementById('botaoComent').classList.remove('active');
+        document.getElementById('botaoVideo').classList.add('active');
+
+        document.getElementById('conteudoFoto').classList.add('d-none');
+        document.getElementById('conteudoComent').classList.add('d-none');
+        document.getElementById('conteudoVideo').classList.remove('d-none');
+    }
+
+    function MostarFoto(){
+        debugger
+        document.getElementById('botaoVideo').classList.remove('active');
+        document.getElementById('botaoComent').classList.remove('active');
+        document.getElementById('botaoFoto').classList.add('active');
+        
+        document.getElementById('conteudoVideo').classList.add('d-none');
+        document.getElementById('conteudoComent').classList.add('d-none');
+        document.getElementById('conteudoFoto').classList.remove('d-none');
+    }
+
+    function MostarComent(){
+        document.getElementById('botaoFoto').classList.remove('active');
+        document.getElementById('botaoVideo').classList.remove('active');
+        document.getElementById('botaoComent').classList.add('active');
+
+        document.getElementById('conteudoFoto').classList.add('d-none');
+        document.getElementById('conteudoVideo').classList.add('d-none');
+        document.getElementById('conteudoComent').classList.remove('d-none');
+    }
+</script>  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-
+HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
